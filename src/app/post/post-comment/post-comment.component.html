@@ -1,0 +1,14 @@
+<ng-container *ngIf="(comments$ | async) as comments">
+  <ng-container *ngFor="let comment of comments">
+    <ul *ngIf="postId === comment.postId">
+      <li>
+        PostId: {{comment.postId}}
+        <br />
+        Name: {{comment.name}}
+        <br />
+        Comment: {{comment.body}}
+      </li>
+    </ul>
+  </ng-container>
+
+</ng-container>
