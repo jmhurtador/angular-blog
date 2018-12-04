@@ -1,13 +1,67 @@
+<mat-toolbar color='primary'>
+  <span>Blog</span>
+</mat-toolbar>
+
 <ng-container *ngIf="(post$ | async) as posts">
-  <div *ngFor="let post of posts ">
-    <h2>{{post.title}}</h2>
-    <br />
-    User Id:{{post.userId}}
-    <br />
-    ID: {{post.id}}
-    <button type="button"
+  <!-- <div *ngFor="let post of posts">
+    <h1>{{post.title}}</h1>
+    <button mat-icon-button
+            (click)="onMoreDetails(post.id)">Leer...
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <app-post *ngIf="post.id === postId"
+              [currentPost]=post></app-post>
+  </div> -->
+  <mat-expansion-panel color='primary'
+                       *ngFor="let post of posts"
+                       (opened)="onMoreDetails(post.id)">
+    <mat-expansion-panel-header>
+      <h2>{{post.title}}</h2>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <app-post *ngIf="post.id === postId"
+                [currentPost]=post></app-post>
+    </ng-template>
+  </mat-expansion-panel>
+  <!-- <mat-card color='primary'
+            *ngFor="let post of posts">
+    <div>
+      <mat-card-header>
+        <mat-card-title>{{post.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-icon-button
+                (click)="onMoreDetails(post.id)">
+          <mat-icon aria-label="See detail">keyboard_arrow_down</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+    <mat-card-content>
+      <app-post *ngIf="post.id === postId"
+                [currentPost]=post></app-post>
+    </mat-card-content>
+  </mat-card> -->
+
+  <!-- <mat-nav-list>
+    <mat-list-item *ngFor="let post of posts">
+      <h1>{{post.title}}</h1>
+      <button mat-icon-button
+              (click)="onMoreDetails(post.id)">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+      <app-post *ngIf="post.id === postId"
+                [currentPost]=post></app-post>
+    </mat-list-item>
+  </mat-nav-list> -->
+  <!-- <mat-list>
+    <mat-list-item *ngFor="let post of posts">
+      <h1>{{post.title}}</h1>
+    </mat-list-item>
+    <button mat-icon-button
+            type="button"
             (click)="onMoreDetails(post.id)">View more...</button>
     <app-post *ngIf="post.id === postId"
               [currentPost]=post></app-post>
-  </div>
+
+  </mat-list> -->
 </ng-container>

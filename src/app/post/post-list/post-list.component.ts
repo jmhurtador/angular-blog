@@ -1,13 +1,8 @@
 import { ApiService } from 'src/app/shared/api.service';
+import { Component, OnInit } from '@angular/core';
+import { debug, debuglog } from 'util';
 import { Observable } from 'rxjs';
 import { Post } from '../Post.interface';
-import {
-  Component,
-  OnInit,
-  EventEmitter,
-  Output,
-  Input,
-} from '@angular/core';
 
 @Component({
   selector: 'app-post-list',

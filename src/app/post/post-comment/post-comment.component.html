@@ -1,14 +1,26 @@
 <ng-container *ngIf="(comments$ | async) as comments">
   <ng-container *ngFor="let comment of comments">
-    <ul *ngIf="postId === comment.postId">
-      <li>
+    <mat-list *ngIf="postId === comment.postId">
+      <mat-list-item>
+        <mat-icon matListIcon>comment</mat-icon>
+        <h5 matLine> By: {{comment.name}} </h5>
+        <h5>({{comment.email}})</h5>
+        <br />
+        <p matLine>
+          {{comment.body}}
+        </p>
+      </mat-list-item>
+    </mat-list>
+    <!-- <mat-divider color='accent'></mat-divider> -->
+    <!-- <ul *ngIf="postId === comment.postId">
+       <li>
         PostId: {{comment.postId}}
-        <br />
-        Name: {{comment.name}}
-        <br />
-        Comment: {{comment.body}}
+        <br /> 
+      Commented by: {{comment.name}}
+      <br />
+      {{comment.body}}
       </li>
-    </ul>
+    </ul> -->
   </ng-container>
 
 </ng-container>
