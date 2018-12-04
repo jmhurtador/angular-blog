@@ -1,4 +1,4 @@
-import { ApiService } from 'src/app/shared/api.service';
+import { ApiService } from '../../shared/api.service';
 import { Comment } from './Comment.interface';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
