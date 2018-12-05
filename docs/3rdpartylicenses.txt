@@ -316,13 +316,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/platform-browser
-MIT
-
 @angular/common
 MIT
 
+@angular/platform-browser
+MIT
+
 @angular/router
+MIT
+
+@angular/animations
 MIT
 
 @angular/cdk
@@ -353,19 +356,6 @@ THE SOFTWARE.
 @angular/forms
 MIT
 
-@angular/animations
-MIT
-
-@angular/material/core
-
-@angular/material/list
-
-@angular/material/icon
-
-@angular/material/expansion
-
-@angular/material/toolbar
-
 zone.js
 MIT
 The MIT License
@@ -389,3 +379,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+@angular/material/core
+
+@angular/material/list
+
+@angular/material/icon
+
+@angular/material/expansion
+
+@angular/material/toolbar

@@ -1,5 +1,5 @@
 import { ApiService } from '../../shared/api.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Post } from '../Post.interface';
 

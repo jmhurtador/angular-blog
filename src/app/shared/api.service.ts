@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class ApiService {
-  private http: HttpClient;
+  // private http: HttpClient;
   constructor(private httpClient: HttpClient) {
-    this.http = httpClient;
+    // this.http = httpClient;
   }
 
   getData<T>(url: string): Observable<T> {
-    return this.http.get<T>(url);
+    return this.httpClient.get<T>(url);
   }
 }
